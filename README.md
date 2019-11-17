@@ -11,3 +11,19 @@ PHP 7
 Vanila Magento 2.3.2 commerce installation
 composer tools
 
+# How to install this extension?
+Under your root folder, run following commands
+    - composer require aligentweb/magento-2-chat-extension 
+    - php bin/magento module:status (optional)
+    - php bin/magento module:enable Aligentweb_Chat
+    - php bin/magento setup:upgrade
+    - php bin/magento setup:static-content:deploy -f
+    - php bin/magento cache:clean
+    
+# How to see the result?
+Go to the backend
+On the magento admin panel, you navigate to the 
+STORES -> Settings -> Configuration -> Aligent -> Chat Configuration
+
+
+
