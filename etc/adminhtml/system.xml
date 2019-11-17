@@ -9,19 +9,27 @@
             <label>Chat Configuration</label>
             <tab>aligentweb</tab>
             <resource>Aligentweb_Chat::chat_config</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General Configuration</label>
-                <field id="license" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <comment><![CDATA[Activate or Deactivate chat module based on the need]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="license" translate="label" type="password" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>License</label>
                     <comment><![CDATA[Chat API License Key]]></comment>
+                    <validate>required-entry validate-length minimum-length-10 maximum-length-32 validate-no-html-tags</validate>
                 </field>
-                <field id="groups" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="groups" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Chat Groups</label>
                     <comment><![CDATA[Allowed chat groups]]></comment>
+                    <validate>required-entry validate-no-html-tags</validate>
                 </field>
-                <field id="params" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <field id="params" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Chat Parameters</label>
                     <comment><![CDATA[Required chat parameters]]></comment>
+                    <validate>validate-no-html-tags</validate>
                 </field>
             </group>
         </section>
