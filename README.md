@@ -23,4 +23,4 @@ Under your root folder, run following commands
 # How to see the result?
 Go to the backend
 On the magento admin panel, you navigate to the 
-STORES -> Settings -> Configuration -> Aligent -> Chat Configuration
+STORES -> Settings -> Configuration -> Aligent -> Chat Configuration  
